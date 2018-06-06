@@ -26,8 +26,11 @@
     "streaming"
   ],
   "scripts": {
-    "postinstall": "./node_modules/.bin/bower-installer && echo '√'",
-    "test": "ls bower_components/"
+    "build": "./node_modules/.bin/bower-installer -rp",
+    "clean": "rm -rf ./node_modules",
+    "test": "du -sh ./bower_components",
+    "preinstall": "rm -rf ./bower_components",
+    "prepare": "yarn build && yarn clean"
   },
   "dependencies": {
     "bower-installer": "~1.3.6"
