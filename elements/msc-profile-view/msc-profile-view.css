@@ -4,6 +4,11 @@
   display: table;
 }
 
+.flexbox_typ{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 *{
   font-family: 'Lato', sans-serif;
 }
@@ -61,7 +66,6 @@ h2{
 }
 
 .account-address {
-  float: right;
   font-size: 14px;
   color: #b0b1b3;
   padding-left:10px;
@@ -71,16 +75,16 @@ h2{
   clear: both;
 }
 
-#th_acc{
-  width: 70%;
+.th_acc{
+  width: 60%;
 }
 
-#th_act{
-  width: 5%;
-}
-
-#th_bal{
+.th_bal{
   width: 25%;
+}
+
+.th_act{
+  width: 15%;
 }
 
 #th_act, .account-act, #th_bal, .account-music, .account-btc, .account-usd{
@@ -97,19 +101,32 @@ table.border_bottom {
   color: #5d5f63;
   font-size: 12px;
   font-weight: 700;
+  width:100%;
 }
 
 table.acct th{
   text-align: left;
 }
 
-tr.border_bottom td {
-  border-bottom:1pt solid #5d5f63;
+table.border_bottom tr {
+  border-bottom:1pt solid #5d5f63 !important;
+  display: flex;
+}
+
+table.border_bottom td{
+  padding: 20px;
+}
+
+p.account-address{
+  margin-left: 50px;
+}
+
+#footer_left{
+  position: absolute;
+  bottom: 30px;
 }
 
 #footer_left, #footer_right{
-  position: absolute;
-  bottom: 30px;
   color: #46494e;
   font-size: 11px;
 }
@@ -143,25 +160,12 @@ tr.border_bottom td {
 
 #mid_right_col{
   clear: both;
-  width: inherit;
   height: auto;
   position: static;
 }
 
-#tableheader_acc{
-  width: 70%;
-}
-
-#tableheader_bal{
-  width: 25%;
-}
-
-#tableheader_act{
-  width: 5%;
-}
-
 #more_accounts{
-  margin-top:160px;
+  margin-top:80px;
   padding-bottom: 60px;
 }
 
@@ -185,10 +189,6 @@ h2.more_accounts{
 
 #left_footer_buttons button.active {
   background-color: #f2c455;
-}
-
-#footer_right{
-  text-align: center;
 }
 
 .title {
