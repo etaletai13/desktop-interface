@@ -2,7 +2,7 @@
   "name": "msc-interface",
   "version": "1.5.1-beta1",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "prepare": "./node_modules/.bin/bower-installer",
     "test": "echo '√'"
