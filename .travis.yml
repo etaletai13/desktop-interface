@@ -16,8 +16,8 @@ deploy:
   provider: npm
   email: parker.casey@gmail.com
   api_key: ${NPM_TOKEN}
+  skip_cleanup: true
   on:
-    branches: 
-    - only: master
-    skip_cleanup: true
+    tags: true
+    branches: releases 
     repo: etaletai13/desktop-interface
